@@ -9,7 +9,7 @@
     "url": "git+https://github.com/ShuvamAich/PlaywrightExperiments.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Shuvam Aich",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ShuvamAich/PlaywrightExperiments/issues"
@@ -18,5 +18,8 @@
   "devDependencies": {
     "@playwright/test": "^1.58.2",
     "@types/node": "^25.5.0"
+  },
+  "dependencies": {
+    "otpauth": "^8.0.1"
   }
 }
