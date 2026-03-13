@@ -137,12 +137,12 @@ The current Playwright configuration is set up to:
 
 Firefox and WebKit entries are present in the configuration but currently commented out.
 
-##Problems
+## Problems
 
-- Test report displays the email and password. Credentials are revealed to someone who has access to the test-report
-- <img width="1005" height="1102" alt="image" src="https://github.com/user-attachments/assets/2e2c364b-4eb5-42d8-9e91-491a2645afeb" />
-- Test trace also reveals the email and password used in logs
-- <img width="2205" height="1170" alt="image" src="https://github.com/user-attachments/assets/34325d88-cef3-4a70-a504-5dc4b1c8c354" />
+### Test report displays the email and password. Credentials are revealed to someone who has access to the test-report
+<img width="1005" height="1102" alt="image" src="https://github.com/user-attachments/assets/2e2c364b-4eb5-42d8-9e91-491a2645afeb" />
+### Test trace also reveals the email and password used in logs
+<img width="2205" height="1170" alt="image" src="https://github.com/user-attachments/assets/34325d88-cef3-4a70-a504-5dc4b1c8c354" />
 
 
 
