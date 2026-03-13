@@ -1,4 +1,4 @@
-# PlaywrightExperiments
+# Automate Heroku MFA with Playwright
 
 This project automates a Heroku login flow protected by multi-factor authentication using Playwright.
 
