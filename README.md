@@ -31,7 +31,6 @@ This means the project is testing a real browser-based authentication flow, not 
 ## Project Structure
 
 - tests/otp.spec.ts: Heroku MFA login test
-- tests/example.spec.ts: sample Playwright test
 - playwright.config.ts: Playwright configuration
 - playwright-report/: generated HTML reports
 - test-results/: failure artifacts and traces
@@ -39,6 +38,7 @@ This means the project is testing a real browser-based authentication flow, not 
 ## How MFA Works In This Test
 
 The test uses the otpauth package to generate a TOTP code locally from the shared secret configured on the Heroku account.
+Reference: https://github.com/hectorm/otpauth
 
 The TOTP generator is configured with:
 
