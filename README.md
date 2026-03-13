@@ -19,3 +19,5 @@ This repository showcases all my Playwright projects. Each project is located on
 ## Projects
 
 Explore the different branches to find various Playwright projects and experiments!
+
+1. Heroku MFA automation
