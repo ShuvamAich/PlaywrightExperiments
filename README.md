@@ -145,9 +145,20 @@ Firefox and WebKit entries are present in the configuration but currently commen
 ### Test trace also reveals the email and password used in logs
 <img width="2205" height="1170" alt="image" src="https://github.com/user-attachments/assets/34325d88-cef3-4a70-a504-5dc4b1c8c354" />
 
+## Major Limitation
 
+In playwright.config.ts, only one project: Chromium is active. 
 
-## Notes And Limitations
+This is due to TOTP tokens being single-use; when tests run in parallel, only one test can successfully authenticate, causing the others to fail.
+
+As a result, there is a limit to how many tests can run concurrently in a single browser session or on multiple browsers in parallel.
+
+Recommended solutions:
+
+1. Design test cases thoughtfully to minimize conflicts.
+2. Maintain additional credentials to support parallel testing.
+
+## Notes 
 
 - This test depends on live Heroku and Salesforce verification pages, so UI text, page structure, or redirect URL changes may require locator updates.
 - Credentials and MFA secrets should not be hardcoded in the test file.
