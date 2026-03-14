@@ -78,6 +78,8 @@ npx playwright test otpEmail.spec.js
 
 7. Logs the OTP value. Once you have this working, you would change this to an assertion.
 
+![alt text](image-5.png)
+
 # Quickstart Guide
 
 <b> Reference: </b> https://mailosaur.com/docs/automation/playwright/quickstart
@@ -117,6 +119,21 @@ You can organise your test emails in the followling way:
 1. test-build-1@{your_server-id}.mailosaur.net
 2. test-build-2@{your_server-id}.mailosaur.net
 3. test-build-3@{your_server-id}.mailosaur.net
+
+### Fetching the otp
+
+```
+// Create the search criteria for the email
+const searchCriteria = {
+    sentTo: emailAddress,
+}; 
+
+const email = await mailosaur.messages.get(serverId, searchCriteria); // Get the email from Mailosaur using the search criteria
+
+const passcode = email.html.codes[0];
+
+console.log(`\nEmail otp code - ${passcode.value}`); // "564214"
+```
 
 ### The following screenshots show how the Mailosaur Inbox looks:
 
