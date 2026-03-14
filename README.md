@@ -120,6 +120,8 @@ You can organise your test emails in the followling way:
 
 ### The following screenshots show how the Mailosaur Inbox looks:
 
+Mailosaur Mailbox
+![alt text](image-1.png)
 
-
-
+Mailosaur automatically discovers the links, codes and attachments in the email making automation more smooth and efficient.
+![alt text](image.png)
