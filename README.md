@@ -20,9 +20,9 @@ This repository showcases all my Playwright projects. Each project is located on
 
 Explore the different branches to find various Playwright projects and experiments!
 
-1. Heroku MFA automation Branch: Automate-MFA
+1. Heroku MFA automation <b>Branch: Automate-MFA</b>
+2. Mailosaur Email Automation <b>Branch: Automate-Mail</b>
 
 Next in Pipeline:
 1. SMS OTP MFA automation
-2. Mail OTP MFA automation
-3. Save and reuse authentication state - Storage State
+2. Save and reuse authentication state - Storage State
