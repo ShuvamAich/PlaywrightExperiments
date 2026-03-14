@@ -130,8 +130,12 @@ Mailosaur automatically discovers the links, codes and attachments in the email 
 
 ## Problems with services like Mailosaur and Twilio
 
-If I want to automate Github Login/Signup workflow, the services mark the OTPs as fraudent hence it is difficult to automate real webages unless we have a paid plan.
+If you want to automate Github, Airbnb or Amazon Login/Signup workflow, the services mark the OTPs as fraudent hence it is difficult to automate real webages unless we have a paid plan.
 
+![alt text](image-2.png)
 
+Same thing happens with Twilio
 
+![alt text](image-3.png)
+![alt text](image-4.png)
 
