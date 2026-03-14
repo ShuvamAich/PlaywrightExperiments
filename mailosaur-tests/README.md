@@ -8,6 +8,8 @@
 
 Visit [Mailosaur's website](https://mailosaur.com) to learn more about Mailosaur, create your own free trial and get started with email and SMS test automation.
 
+<b>You only get 14 Days of free trial period</b>
+
 ## Documentation
 
 Documentation can be found on [Mailosaur's site](https://mailosaur.com/docs).
@@ -53,30 +55,6 @@ npx playwright test passwordReset.spec.js
 
 7. Completes the password reset process by setting a new password.
 
-## Multi-Factor Authentication (MFA) via SMS - `otpSms.spec.js`
-
-> [!NOTE]  
-> **Setup Required -** [enable SMS testing](https://mailosaur.com/app/sms), and setup a phone number, within your Mailosaur account.
-
-Shows you how to test two-step verification workflows that use text messages:
-
-```
-npx playwright test otpSms.spec.js
-```
-
-**NOTE:** Before you run this test, you must send an SMS message to your Mailosaur phone number. To do this, either:
-
-- Update the test case so that it performs whatever automated steps are required to trigger an SMS message to be sent (e.g. attempt to log into your product).
-
-- Or, manually send in an SMS message from your own phone, just to test the process.
-
-When you run the test, it:
-
-1. Uses the Mailosaur API to wait for an SMS message to arrive at the given phone number. (🚨 **NOTE:** Your must first set the `MAILOSAUR_PHONE_NUMBER` variable inside the `.env` file to your dedicated Mailosaur phone number.)
-
-2. Grabs the one-time password (OTP).
-
-3. Logs the OTP value. Once you have this working, you would change this to an assertion.
 
 ## Multi-Factor Authentication (MFA) via Email - `otpEmail.spec.js`
 
@@ -100,19 +78,29 @@ npx playwright test otpEmail.spec.js
 
 7. Logs the OTP value. Once you have this working, you would change this to an assertion.
 
-## Multi-Factor Authentication (MFA) via App - `otpAuthenticator.spec.js`
+# Quickstart Guide
 
-> [!NOTE]  
-> **Setup Required -** [enable Mailosaur Authenticator](https://mailosaur.com/app/authenticator) within your Mailosaur account.
+<b> Reference: </b> https://mailosaur.com/docs/automation/playwright/quickstart
 
-Shows you how to test a workflow that uses app-based two-step verification (e.g. Google Authenticator, Auth0, etc.):
+### Prerequisites
+1. A Mailosaur account or free trial account.
+2. An API key generated in your account.
+
+### Generate a sample test
 
 ```
-npx playwright test otpAuthenticator.spec.js
+npm create mailosaur@latest
 ```
 
-1. Sets the shared secret for the test. This secret is the base32-encoded value used to generate one-time passwords (OTPs). This is typically shown to a user who cannot scan a QR code when setting up MFA/2FA.
+This gives you a simple Playwright project with Mailosaur pre-configured, along with some basic tests.
 
-2. Uses the Mailosaur API to fetch the current one-time password (OTP) for this shared secret.
+It prompts you to choose:
+1. Project Name
+2. Testing Framework (Playwright, cypress, Selenium, etc.)
+3. Language (Node.js, .NET)
+4. Create Sample Tests
+5. Mailosaur API Key
+6. Mailosaur Server ID
+7. Install Test Dependencies
 
-3. Logs the OTP value.
+
