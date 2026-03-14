@@ -1,28 +1,125 @@
-# Playwright Projects
+<p>
+<a href="https://mailosaur.com">
+<img class="" height="24" width="165" alt="Mailosaur logo" src="https://mailosaur.com/images/logo-color-dark.svg">
+</a>
+</p>
 
-This repository showcases all my Playwright projects. Each project is located on a different branch in this repository.
+# Getting Started
 
-## How to Use
+Visit [Mailosaur's website](https://mailosaur.com) to learn more about Mailosaur, create your own free trial and get started with email and SMS test automation.
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/ShuvamAich/PlaywrightExperiments.git
-   ```
+<b>You only get 14 Days of free trial period</b>
 
-2. **Checkout the desired branch** to view a specific project:
-   ```bash
-   git checkout <branch-name>
-   ```
+## Documentation
 
-3. Follow the instructions in each branch's documentation to run the project.
+Documentation can be found on [Mailosaur's site](https://mailosaur.com/docs).
 
-## Projects
+We also have specific documentation for [Playwright](https://mailosaur.com/docs/frameworks-and-tools/playwright) on [email testing](https://mailosaur.com/docs/email-testing/playwright) and [SMS testing](https://mailosaur.com/docs/sms-testing/playwright).
 
-Explore the different branches to find various Playwright projects and experiments!
+As well as documentation for [Node.js](https://mailosaur.com/docs/languages/nodejs).
 
-1. Heroku MFA automation Branch: Automate-MFA
+## Running Tests
 
-Next in Pipeline:
-1. SMS OTP MFA automation
-2. Mail OTP MFA automation
-3. Save and reuse authentication state - Storage State
+You can run all the example tests included in this project using `npm`:
+
+```
+npm run test
+```
+
+> [!NOTE]  
+> Where a test depends on a feature that may not yet be enabled on your account, the test is skipped by default.
+
+# What's Included
+
+This project includes examples for many common test scenarios:
+
+## Reset a password using email - `passwordReset.spec.js`
+
+Shows you how to perform an automated test for a password reset workflow:
+
+```
+npx playwright test passwordReset.spec.js
+```
+
+1. Creates a unique, random email address for the test case.
+
+2. Navigates to the [Mailosaur example site](https://example.mailosaur.com/password-reset), which has a mock password reset form.
+
+3. Uses browser automation to submit a password reset request for the email address.
+
+4. Uses the Mailosaur API to wait for a new email to arrive at the given email address.
+
+5. Asserts that the email received is the expected one.
+
+6. Navigates to the link found in the email.
+
+7. Completes the password reset process by setting a new password.
+
+
+## Multi-Factor Authentication (MFA) via Email - `otpEmail.spec.js`
+
+Shows you how to perform an automated test for a workflow that sends a one-time password (OTP) via email:
+
+```
+npx playwright test otpEmail.spec.js
+```
+
+1. Creates a unique, random email address for the test case.
+
+2. Navigates to the [Mailosaur example site](https://example.mailosaur.com/otp), which has a form that sends an email containing a one-time password (OTP).
+
+3. Uses browser automation to submit this form.
+
+4. Uses the Mailosaur API to wait for a new email to arrive at the given email address.
+
+5. Asserts that the email received is the expected one.
+
+6. Grabs the one-time password (OTP).
+
+7. Logs the OTP value. Once you have this working, you would change this to an assertion.
+
+# Quickstart Guide
+
+<b> Reference: </b> https://mailosaur.com/docs/automation/playwright/quickstart
+
+### Prerequisites
+1. A Mailosaur account or free trial account.
+2. An API key generated in your account.
+
+### Generate a sample test
+
+```
+npm create mailosaur@latest
+```
+
+This gives you a simple Playwright project with Mailosaur pre-configured, along with some basic tests.
+
+It prompts you to choose:
+1. Project Name
+2. Testing Framework (Playwright, cypress, Selenium, etc.)
+3. Language (Node.js, .NET)
+4. Create Sample Tests
+5. Mailosaur API Key
+6. Mailosaur Server ID
+7. Install Test Dependencies
+
+### Generating a random email
+
+Any address ending @{your_server-id}.mailosaur.net will work with the inbox
+We are randomly generating an email.
+
+```
+    const randomString = (Math.random() + 1).toString(36).substring(7);
+    const emailAddress = `${randomString}@${serverId}.mailosaur.net`;
+```
+
+You can organise your test emails in the followling way:
+1. test-build-1@{your_server-id}.mailosaur.net
+2. test-build-2@{your_server-id}.mailosaur.net
+3. test-build-3@{your_server-id}.mailosaur.net
+
+### The following screenshots show how the Mailosaur Inbox looks:
+
+
+
+
