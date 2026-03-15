@@ -134,7 +134,7 @@ npx playwright show-report
 
 ## Future Improvements
 
-- Move hardcoded token usage fully out of setup requests where not required.
+- Implement Negative Test Cases
 - Externalize environment-specific values into environment variables.
 - Add negative test cases for validation and auth errors.
 - Add API contract checks for response schemas.
