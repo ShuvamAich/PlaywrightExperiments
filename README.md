@@ -5,7 +5,10 @@ This project uses Playwright Test to validate core API workflows for the Thinkin
 - App URL: https://thinking-tester-contact-list.herokuapp.com/
 - API Documentation: https://documenter.getpostman.com/view/4012288/TzK2bEa8
 
-<b>Note: No UI Interactions have been made in this project.</b>
+
+> [!NOTE]  
+> <b>No UI Interactions have been made in this project.
+The tests pass on all 3 workers.</b>
 
 ## Overview
 
