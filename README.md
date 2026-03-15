@@ -22,6 +22,7 @@ Explore the different branches to find various Playwright projects and experimen
 
 1. Heroku MFA automation <b>Branch: Automate-MFA</b>
 2. Mailosaur Email Automation <b>Branch: Automate-Mail</b>
+3. API Automation <b>Branch: Automate-API</b>
 
 Next in Pipeline:
 1. SMS OTP MFA automation
