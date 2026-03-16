@@ -111,3 +111,23 @@ All 6 tests pass in approximately 17 seconds on a single worker.
 ![alt text](image-1.png)
 
 ![alt text](image-2.png)
+
+## Problems with this approach:
+
+1. Tests generated were flaky.
+
+To generate the email for the signup of user, at first the LLM generated `testuser_${Date.now()}@example.com` which continuously collided with parallel tests. Hence I manually replaced it with `testuser_${randomUUID().split('-')[0]}@example.com`
+
+2. Took too much time to verify after generating the tests. 
+
+The loop of refactoring and verifying almost went on endlessly and almost consumed 88.8K Tokens out of 200K tokens (44%)  
+
+3. Manually had to change some url assertions.
+
+This proves that there is still a need to have a man in the middle to understand and refactor the code generated and we cannot fully depend on the LLM to generate an accurate code. Sometimes, the debugging takes more time than generating the code. So we must consider the tradeoff between ai-generated code vs manual debugging of that code.
+
+## References
+
+1. https://thinking-tester-contact-list.herokuapp.com/
+2. https://youtu.be/FGwtDhjnBMc?si=ASwO22b7R9Zzf00K - Artem Bondar
+3. https://youtu.be/AaCj939XIQ4?si=3xib3_Cgl0XFNpV4 - Playwright
