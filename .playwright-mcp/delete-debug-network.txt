@@ -1,0 +1,2 @@
+[GET] https://thinking-tester-contact-list.herokuapp.com/img/thinkingTesterIcon.png => [200] OK
+[GET] https://thinking-tester-contact-list.herokuapp.com/img/thinkingTesterIcon.png => [200] OK
