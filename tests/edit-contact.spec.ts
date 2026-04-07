@@ -10,7 +10,7 @@ const WAIT_TIMEOUT = 30000;
 async function loginAndNavigateToEditContact(page: any) {
   const uniqueEmail = `testuser_${randomUUID().split('-')[0]}@example.com`;
   await page.goto(BASE_URL);
-  const setupResult = await page.evaluate(async ({ email }) => {
+  const setupResult = await page.evaluate(async ({ email }: { email: string }) => {
     const userResponse = await fetch('/users', {
       method: 'POST',
       headers: {
