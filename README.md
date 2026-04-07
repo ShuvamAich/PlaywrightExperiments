@@ -24,6 +24,7 @@ Explore the different branches to find various Playwright projects and experimen
 2. Mailosaur Email Automation <b>Branch: Automate-Mail</b>
 3. API Automation <b>Branch: Automate-API</b>
 4. Playwright MCP Server Usecase <b>Branch: MCP-Server</b>
+5. AI Agents <b> Branch: AI-Agents</b>
 
 Next in Pipeline:
 1. SMS OTP MFA automation
