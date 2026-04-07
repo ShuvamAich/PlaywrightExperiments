@@ -325,3 +325,9 @@ This repository now contains a stable, AI-assisted Playwright test suite for the
 
 At the time of this README update, the suite is green.
 
+<img width="1040" height="1297" alt="image" src="https://github.com/user-attachments/assets/29a88571-d531-4b33-a99e-c2633e5deef3" />
+
+<img width="437" height="642" alt="image" src="https://github.com/user-attachments/assets/a92f29eb-b8a8-4f2c-9191-401067528185" />
+
+
+
