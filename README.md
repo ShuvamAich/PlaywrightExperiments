@@ -124,7 +124,7 @@ The loop of refactoring and verifying almost went on endlessly and almost consum
 
 3. Manually had to change some url assertions.
 
-This proves that there is still a need to have a man in the middle to understand and refactor the code generated and we cannot fully depend on the LLM to generate an accurate code. Sometimes, the debugging takes more time than generating the code. So we must consider the tradeoff between ai-generated code vs manual debugging of that code.
+This proves that there is still a need to have a human in the loop to understand and refactor the code generated and we cannot fully depend on the LLM to generate an accurate code. Sometimes, the debugging takes more time than generating the code. So we must consider the tradeoff between ai-generated code vs manual debugging of that code.
 
 ## References
 
